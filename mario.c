@@ -6,10 +6,11 @@ int n;
 int main(void)
 {
   do
-  {
-      n =get_int("Height: ");
-  }
-  while(n<1);
+     { n = get_int("Width: ");
+     
+     
+     }
+    while (n <1 || n >8);
   for(int i=0;i<n;i++)
   
   {int m= i;
