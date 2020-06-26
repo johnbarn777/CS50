@@ -14,17 +14,20 @@ checksum+= digit1(15)+ digit1(13)+digit1(11)+digit1(9)+digit1(7)+digit1(5)+digit
 checksum = checksum%10;
 if (checksum==0)
 {
-    if(digit1(16)==5 && (digit1(15)==1||digit1(15)==2||digit1(15)==3||digit1(15)==4||digit1(15)==5))
+    if((digit1(16)==5) && ((digit1(15)==1)||(digit1(15)==2)||(digit1(15)==3)||(digit1(15)==4)||(digit1(15)==5)))
     {
         printf("MASTERCARD\n");
     }
-    else if(digit1(15)==3 && (digit1(14)==4 || digit(14)==7))
+     else if((digit1(15)==3)&&(digit1(14)==4||digit1(14)==7)) 
     {
         printf("AMEX\n");
     }
-    else if(digit1(16)==4 || (digit1(16)==0 && digit1(15)==0 && digit1(14)==0 && digit1(13)==4))
+    else if((digit1(16)==4) || ((digit1(16)==0) && (digit1(15)==0) && (digit1(14)==0) && (digit1(13)==4)))
     {
         printf("VISA\n");
+    }
+    else{
+        printf("INVALID\n");
     }
 }
 else
