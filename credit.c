@@ -5,10 +5,9 @@ int digit1(int i);
 long n;
 int main(void)
 {
-    do
-    {
+    
+    
         n = get_long("Card Number: ");
-    }while(n<999999999999);
 
 int checksum =digit(16)+digit(14)+digit(12)+digit(10)+digit(8)+digit(6)+digit(4)+digit(2);
 checksum+= digit1(15)+ digit1(13)+digit1(11)+digit1(9)+digit1(7)+digit1(5)+digit1(3)+digit1(1);
