@@ -23,6 +23,17 @@ int main(int argc, string argv[])
         return 1;
         
     }
+    for(int m=0; m<26; m++)
+    {
+        for(int n=0; n<26; n++)
+        {
+            if(argv[1][m] == argv[1][n])
+            {
+                printf("Key must not contain repeated characters!");
+                return 1;
+            }
+        }
+    }
     
     }{// getting plaintext
         string message = get_string("plaintext: ");
