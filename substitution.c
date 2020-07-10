@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     }
     
     }{// getting plaintext
-        string message = get_string("plaintext :");
+        string message = get_string("plaintext: ");
         //printing ciphertext
         printf("ciphertext: ");
         
