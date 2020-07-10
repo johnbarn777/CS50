@@ -6,9 +6,13 @@
 int main(int argc, string argv[])
 
 {// argv checking
+    if(argc != 2 )
+    {
+         printf("Usage : ./substitution key\n");
+    }
     for(int i=0; i<strlen(argv[1]); i++)
     {
-    if (argc!=2 || argv[1][i]<65 || (argv[1][i]>90 && argv[1][i] <97) || argv[1][i]>122)
+    if (argv[1][i]<65 || (argv[1][i]>90 && argv[1][i] <97) || argv[1][i]>122)
     {
         printf("Usage : ./substitution key\n");
         return 1;
@@ -44,5 +48,5 @@ int main(int argc, string argv[])
         }}
         
 }
-printf("/n");
+printf("\n");
 return 1;}
