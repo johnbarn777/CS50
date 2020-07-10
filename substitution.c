@@ -23,7 +23,7 @@ int main(int argc, string argv[])
     }{// getting plaintext
         string message = get_string("plaintext :");
         //printing ciphertext
-        printf("ciphertext :");
+        printf("ciphertext: ");
         
         for(int j=0; j<strlen(message); j++)
         {for(int k=0; k<127; k++)
@@ -32,7 +32,7 @@ int main(int argc, string argv[])
             {
                 if(k>64 && k<91)
                 {
-                    printf("%c",toupper(argv[1][k-66]));
+                    printf("%c",toupper(argv[1][k-65]));
                 }
                 else if(k>96 && k<123)
                 {
