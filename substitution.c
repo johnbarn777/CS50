@@ -49,4 +49,4 @@ int main(int argc, string argv[])
         
 }
 printf("\n");
-return 1;}
+return 0;}
