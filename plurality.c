@@ -66,20 +66,21 @@ int main(int argc, string argv[])
 
 // Update vote totals given a new vote
 bool vote(string name)
-{ bool truth = false; 
-  for (int i=0; i<candidate_count; i++)
+{ 
+    bool truth = false; 
+     for (int i = 0; i < candidate_count; i++)
   {
-      if(strcmp(name,candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
       {
           candidates[i].votes++;
-          truth = true;
+           truth = true;
          
       }
        
   }
-  if(truth == true)
+  if (truth == true)
   {
-   return true;   
+      return true;   
   }
   else
   {
@@ -89,17 +90,18 @@ bool vote(string name)
 
 // Print the winner (or winners) of the election
 void print_winner(void)
-{int max_votes = 0;
-    for(int i = 0; i < candidate_count; i++)
+{
+    int max_votes = 0;
+    for (int i = 0; i < candidate_count; i++)
     {
         if(candidates[i].votes > max_votes)
         {
             max_votes = candidates[i].votes;
         }
     }
-    for(int i=0; i<candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(max_votes == candidates[i].votes)
+        if (max_votes == candidates[i].votes)
         {
             printf("%s\n", candidates[i].name);
             
